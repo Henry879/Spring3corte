@@ -1,7 +1,7 @@
-FROM openjdk:17-jdk
+FROM cgr.dev/chainguard/openjdk:21
 
-COPY "./target/Equipo_Futbol-0.0.1-SNAPSHOT.jar" "app.jar"
+COPY "./target/Equipo_Futbol-0.0.1-SNAPSHOT.jar" "/app.jar"
 
 EXPOSE 8091
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
